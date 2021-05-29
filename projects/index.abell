@@ -1,0 +1,24 @@
+{{
+  const fs = require('fs');
+}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saurabh's Demo Projects</title>
+</head>
+<body>
+  <h2>Saurabh's Demo Projects</h2>
+  <ul>
+    {{
+      fs.readdirSync(__dirname)
+        .filter(dirName => !dirName.includes('index.'))
+        .map((demoWebsite) => /* html */ `
+          <li><a href="${demoWebsite}/">${demoWebsite}</a></li>
+        `)
+    }}
+  </ul>
+</body>
+</html>
