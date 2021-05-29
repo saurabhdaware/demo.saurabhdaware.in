@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:demo": "abell serve",
-    "build:demo": "abell build"
+    "dev": "abell serve",
+    "build": "abell build",
+    "build:demo": "npm run build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "abell": "^0.10.3"
+  }
 }
