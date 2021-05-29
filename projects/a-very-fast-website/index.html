@@ -14,7 +14,7 @@
 
 <body class="faint">
   <div class="placeholder-content">
-    <span style="color: #000;">Loading content please wait...</span>
+    <span style="color: #000;position: absolute">Loading content please wait...</span>
     <h1>Hello there!</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget lacinia libero. In vulputate et lectus ac
       venenatis. </p>
@@ -33,14 +33,14 @@
 
     setTimeout(() => {
       imageContainer.innerHTML = `<img alt="giraffe" src="giraffe.jpeg" width="300" />`;
-    }, 2000);
+    }, 3000);
 
     setTimeout(async () => {
       document.body.classList.remove('faint');
       document.querySelector('.placeholder-content').outerHTML = '';
       const contentData = await fetch('/.netlify/functions/content-response').then(res => res.text());
       document.querySelector('.actual-content').innerHTML = contentData;
-    }, 1000);
+    }, 2000);
   </script>
 </body>
 
