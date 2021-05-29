@@ -1,4 +1,6 @@
 exports.handler = function(event, context) {
+  console.log('called');
+  console.log(event);
   return {
       statusCode: 200,
       body: `
