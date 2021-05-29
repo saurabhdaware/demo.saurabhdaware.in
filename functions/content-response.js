@@ -1,6 +1,9 @@
 exports.handler = function(event, context) {
   return {
       statusCode: 200,
-      body: JSON.stringify({message: "Content From API"})
+      body: `
+        <h2>App Heading</h2>
+        <p>Content from API</p>
+      `
   };
 }

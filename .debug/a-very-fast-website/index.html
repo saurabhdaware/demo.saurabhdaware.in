@@ -38,8 +38,8 @@
     setTimeout(async () => {
       document.body.classList.remove('faint');
       document.querySelector('.placeholder-content').outerHTML = '';
-      const contentData = await fetch('/.netlify/functions/content-response').then(res => res.json());
-      document.querySelector('.actual-content').innerHTML = contentData.message;
+      const contentData = await fetch('/.netlify/functions/content-response').then(res => res.text());
+      document.querySelector('.actual-content').innerHTML = contentData;
     }, 1000);
   </script>
 </body>
